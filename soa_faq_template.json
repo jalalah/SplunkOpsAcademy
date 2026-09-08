@@ -1,0 +1,627 @@
+{
+    "title": "Frequently Asked Questions",
+    "description": "FAQ page for Splunk Ops Academy with common questions, troubleshooting tips, and support guidance.",
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            },
+            "ds.spl2": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            }
+        },
+        "visualizations": {
+            "global": {
+                "showProgressBar": true
+            }
+        }
+    },
+    "visualizations": {
+        "viz_access_bg": {
+            "options": {
+                "fillColor": "#1C3354",
+                "strokeColor": "#4EA1FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_access_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_access_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "🔐 🚀 [TITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_contact_button_bg": {
+            "options": {
+                "fillColor": "#071A2F",
+                "strokeColor": "#ffffff"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_contact_button_text": {
+            "options": {
+                "customFontSize": 18,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "[LINK HERE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_dashboard_bg": {
+            "options": {
+                "fillColor": "#1A2438",
+                "strokeColor": "#F26A21"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_dashboard_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_dashboard_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "📊 🚀 [TITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_feedback_bg": {
+            "options": {
+                "fillColor": "#102D4F",
+                "strokeColor": "#3E8BFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_feedback_button_bg": {
+            "options": {
+                "fillColor": "#071A2F",
+                "strokeColor": "#ffffff"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_feedback_button_text": {
+            "options": {
+                "customFontSize": 18,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "[LINK HERE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_feedback_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_feedback_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "💬 🚀 [TITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_getting_started_bg": {
+            "options": {
+                "fillColor": "#163A2E",
+                "strokeColor": "#38C172"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_getting_started_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_getting_started_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "🚀 [TITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_header_icon": {
+            "options": {
+                "customFontSize": 80,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "❓"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_header_subtitle": {
+            "options": {
+                "customFontSize": 22,
+                "fontColor": "#f1813f",
+                "fontSize": "custom",
+                "markdown": "[SUBTITLE HERE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_header_title": {
+            "options": {
+                "customFontSize": 40,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "## Frequently Asked Questions"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_help_bg": {
+            "options": {
+                "fillColor": "#F26A21",
+                "strokeColor": "#FF8B45"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_help_icon": {
+            "options": {
+                "customFontSize": 42,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "🙋"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_help_text": {
+            "options": {
+                "customFontSize": 18,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_help_title": {
+            "options": {
+                "customFontSize": 30,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "## [TITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_intro_bg": {
+            "options": {
+                "fillColor": "#102D4F",
+                "strokeColor": "#3E8BFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_intro_text": {
+            "options": {
+                "customFontSize": 18,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "[SUBTITLE HERE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_learning_bg": {
+            "options": {
+                "fillColor": "#312455",
+                "strokeColor": "#9A6DFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_learning_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_learning_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "📚 🚀 [TITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_troubleshooting_bg": {
+            "options": {
+                "fillColor": "#3B2C14",
+                "strokeColor": "#F5B942"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_troubleshooting_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER\n\n**QUESTION.**  \nANSWER"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_troubleshooting_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#ffffff",
+                "fontSize": "custom",
+                "markdown": "🛠️ 🚀 [TITLE]"
+            },
+            "type": "splunk.markdown"
+        }
+    },
+    "layout": {
+        "globalInputs": [],
+        "layoutDefinitions": {
+            "layout_1": {
+                "options": {
+                    "backgroundColor": "#071A2F",
+                    "display": "auto",
+                    "height": 1080,
+                    "width": 1440
+                },
+                "structure": [
+                    {
+                        "item": "viz_header_icon",
+                        "position": {
+                            "h": 90,
+                            "w": 100,
+                            "x": 30,
+                            "y": 30
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_header_title",
+                        "position": {
+                            "h": 75,
+                            "w": 820,
+                            "x": 110,
+                            "y": 25
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_header_subtitle",
+                        "position": {
+                            "h": 45,
+                            "w": 1180,
+                            "x": 115,
+                            "y": 85
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_intro_bg",
+                        "position": {
+                            "h": 90,
+                            "w": 1365,
+                            "x": 35,
+                            "y": 145
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_intro_text",
+                        "position": {
+                            "h": 50,
+                            "w": 1300,
+                            "x": 65,
+                            "y": 168
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_getting_started_bg",
+                        "position": {
+                            "h": 290,
+                            "w": 420,
+                            "x": 35,
+                            "y": 260
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_getting_started_title",
+                        "position": {
+                            "h": 40,
+                            "w": 370,
+                            "x": 60,
+                            "y": 280
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_getting_started_text",
+                        "position": {
+                            "h": 210,
+                            "w": 370,
+                            "x": 60,
+                            "y": 325
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_access_bg",
+                        "position": {
+                            "h": 290,
+                            "w": 420,
+                            "x": 510,
+                            "y": 260
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_access_title",
+                        "position": {
+                            "h": 40,
+                            "w": 370,
+                            "x": 535,
+                            "y": 280
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_access_text",
+                        "position": {
+                            "h": 210,
+                            "w": 370,
+                            "x": 535,
+                            "y": 325
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_learning_bg",
+                        "position": {
+                            "h": 290,
+                            "w": 420,
+                            "x": 980,
+                            "y": 260
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_learning_title",
+                        "position": {
+                            "h": 40,
+                            "w": 370,
+                            "x": 1010,
+                            "y": 280
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_learning_text",
+                        "position": {
+                            "h": 205,
+                            "w": 370,
+                            "x": 1000,
+                            "y": 320
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_dashboard_bg",
+                        "position": {
+                            "h": 290,
+                            "w": 420,
+                            "x": 40,
+                            "y": 580
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_dashboard_title",
+                        "position": {
+                            "h": 40,
+                            "w": 370,
+                            "x": 60,
+                            "y": 605
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_dashboard_text",
+                        "position": {
+                            "h": 210,
+                            "w": 370,
+                            "x": 60,
+                            "y": 650
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_troubleshooting_bg",
+                        "position": {
+                            "h": 290,
+                            "w": 420,
+                            "x": 510,
+                            "y": 580
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_troubleshooting_title",
+                        "position": {
+                            "h": 40,
+                            "w": 370,
+                            "x": 535,
+                            "y": 605
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_troubleshooting_text",
+                        "position": {
+                            "h": 210,
+                            "w": 370,
+                            "x": 540,
+                            "y": 650
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_feedback_bg",
+                        "position": {
+                            "h": 290,
+                            "w": 420,
+                            "x": 980,
+                            "y": 585
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_feedback_title",
+                        "position": {
+                            "h": 40,
+                            "w": 370,
+                            "x": 1010,
+                            "y": 600
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_feedback_text",
+                        "position": {
+                            "h": 210,
+                            "w": 370,
+                            "x": 1005,
+                            "y": 650
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_help_bg",
+                        "position": {
+                            "h": 130,
+                            "w": 1365,
+                            "x": 40,
+                            "y": 920
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_help_icon",
+                        "position": {
+                            "h": 60,
+                            "w": 60,
+                            "x": 65,
+                            "y": 945
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_help_title",
+                        "position": {
+                            "h": 50,
+                            "w": 400,
+                            "x": 135,
+                            "y": 920
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_help_text",
+                        "position": {
+                            "h": 45,
+                            "w": 760,
+                            "x": 135,
+                            "y": 970
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_contact_button_bg",
+                        "position": {
+                            "h": 55,
+                            "w": 170,
+                            "x": 980,
+                            "y": 940
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_contact_button_text",
+                        "position": {
+                            "h": 30,
+                            "w": 120,
+                            "x": 1015,
+                            "y": 955
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_feedback_button_bg",
+                        "position": {
+                            "h": 55,
+                            "w": 180,
+                            "x": 1180,
+                            "y": 940
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_feedback_button_text",
+                        "position": {
+                            "h": 45,
+                            "w": 165,
+                            "x": 1200,
+                            "y": 950
+                        },
+                        "type": "block"
+                    }
+                ],
+                "type": "absolute"
+            }
+        },
+        "options": {
+            "showTitleAndDescription": false
+        },
+        "tabs": {
+            "items": [
+                {
+                    "label": "FAQ",
+                    "layoutId": "layout_1"
+                }
+            ]
+        }
+    }
+}
