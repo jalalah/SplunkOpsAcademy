@@ -1,0 +1,681 @@
+{
+    "title": "Training and Resource Hub Template",
+    "description": "Reusable landing page template for training, resources, support, and guidance.",
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            },
+            "ds.spl2": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            }
+        },
+        "visualizations": {
+            "global": {
+                "showProgressBar": true
+            }
+        }
+    },
+    "visualizations": {
+        "viz_contact_bg": {
+            "options": {
+                "fillColor": "#071A2F",
+                "strokeColor": "#FFFFFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_contact_text": {
+            "options": {
+                "customFontSize": 22,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "🙋 /en-US/app/[APP_ID]/[CONTACT_VIEW_ID]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_card": {
+            "options": {
+                "fillColor": "#0B223D",
+                "strokeColor": "#294E70"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_hero_icon": {
+            "options": {
+                "customFontSize": 64,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "🎓"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_tag": {
+            "options": {
+                "customFontSize": 19,
+                "fontColor": "#F5B942",
+                "fontSize": "custom",
+                "markdown": "**Choose a path below based on what you want to accomplish today.**"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_text": {
+            "options": {
+                "customFontSize": 20,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "[ENTER A SHORT DESCRIPTION OF THE TRAINING, RESOURCES, DOCUMENTATION, AND SUPPORT AVAILABLE THROUGH THIS APPLICATION.]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_title": {
+            "options": {
+                "customFontSize": 42,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Welcome to [APPLICATION]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_left_accent": {
+            "options": {
+                "fillColor": "#F26A21"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_left_panel": {
+            "options": {
+                "fillColor": "#102D4F",
+                "strokeColor": "#3E8BFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_left_subtitle": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#CFD8E3",
+                "fontSize": "custom",
+                "markdown": "Jump directly to the page that matches what you need."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_left_title": {
+            "options": {
+                "customFontSize": 28,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Quick Links"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_logo_placeholder": {
+            "options": {
+                "customFontSize": 68,
+                "fontColor": "#FFFFFF",
+                "fontSize": "large",
+                "markdown": "🏢\n\n**[ORGANIZATION OR APPLICATION LOGO]**"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_path_1_bg": {
+            "options": {
+                "fillColor": "#163A2E",
+                "strokeColor": "#38C172"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_path_1_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "### 🌱 /en-US/app/[APP_ID]/[PATH_ONE_VIEW_ID]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_path_2_bg": {
+            "options": {
+                "fillColor": "#1C3354",
+                "strokeColor": "#4EA1FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_path_2_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "### 🚀 /en-US/app/[APP_ID]/[PATH_TWO_VIEW_ID]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_path_3_bg": {
+            "options": {
+                "fillColor": "#312455",
+                "strokeColor": "#9A6DFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_path_3_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "### ✏️ /en-US/app/[APP_ID]/[PATH_THREE_VIEW_ID]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_path_title": {
+            "options": {
+                "customFontSize": 30,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Where Should I Go?"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_quick_1_bg": {
+            "options": {
+                "fillColor": "#163A2E",
+                "strokeColor": "#38C172"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_quick_1_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "🌱 /en-US/app/[APP_ID]/[BEGINNER_VIEW_ID]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_quick_2_bg": {
+            "options": {
+                "fillColor": "#312455",
+                "strokeColor": "#9A6DFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_quick_2_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "📚 /en-US/app/[APP_ID]/[TRAINING_VIEW_ID]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_quick_3_bg": {
+            "options": {
+                "fillColor": "#3B2C14",
+                "strokeColor": "#F5B942"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_quick_3_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "🔍 /en-US/app/[APP_ID]/[PRACTICAL_VIEW_ID]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_quick_4_bg": {
+            "options": {
+                "fillColor": "#1C3354",
+                "strokeColor": "#4EA1FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_quick_4_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "❓ /en-US/app/[APP_ID]/[HELP_VIEW_ID]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_resource_links": {
+            "options": {
+                "customFontSize": 18,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "📚 /en-US/app//en-US/app//en-US/app/[APP_ID]/[VISUALIZATION_VIEW_ID]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_resources_panel": {
+            "options": {
+                "fillColor": "#0B223D",
+                "strokeColor": "#294E70"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_resources_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#CFD8E3",
+                "fontSize": "custom",
+                "markdown": "[ENTER A SHORT DESCRIPTION OF THE DOCUMENTATION, EXAMPLES, STANDARDS, AND REFERENCE MATERIAL AVAILABLE HERE.]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_resources_title": {
+            "options": {
+                "customFontSize": 28,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Helpful Resources"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_support_panel": {
+            "options": {
+                "fillColor": "#F26A21",
+                "strokeColor": "#FF8B45"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_support_text": {
+            "options": {
+                "customFontSize": 18,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "[ENTER INSTRUCTIONS FOR QUESTIONS, ACCESS ISSUES, TRAINING REQUESTS, CONTENT RECOMMENDATIONS, OR PLATFORM SUPPORT.]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_support_title": {
+            "options": {
+                "customFontSize": 28,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Need Help?"
+            },
+            "type": "splunk.markdown"
+        }
+    },
+    "layout": {
+        "globalInputs": [],
+        "layoutDefinitions": {
+            "layout_1": {
+                "options": {
+                    "backgroundColor": "#071A2F",
+                    "display": "auto",
+                    "height": 1080,
+                    "width": 1440
+                },
+                "structure": [
+                    {
+                        "item": "viz_left_panel",
+                        "position": {
+                            "h": 880,
+                            "w": 300,
+                            "x": 30,
+                            "y": 30
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_left_accent",
+                        "position": {
+                            "h": 880,
+                            "w": 20,
+                            "x": 30,
+                            "y": 30
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_left_title",
+                        "position": {
+                            "h": 55,
+                            "w": 245,
+                            "x": 65,
+                            "y": 60
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_left_subtitle",
+                        "position": {
+                            "h": 65,
+                            "w": 235,
+                            "x": 65,
+                            "y": 115
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_quick_1_bg",
+                        "position": {
+                            "h": 80,
+                            "w": 245,
+                            "x": 60,
+                            "y": 190
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_quick_1_text",
+                        "position": {
+                            "h": 50,
+                            "w": 205,
+                            "x": 80,
+                            "y": 210
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_quick_2_bg",
+                        "position": {
+                            "h": 80,
+                            "w": 245,
+                            "x": 60,
+                            "y": 300
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_quick_2_text",
+                        "position": {
+                            "h": 50,
+                            "w": 205,
+                            "x": 80,
+                            "y": 320
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_quick_3_bg",
+                        "position": {
+                            "h": 80,
+                            "w": 245,
+                            "x": 60,
+                            "y": 410
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_quick_3_text",
+                        "position": {
+                            "h": 50,
+                            "w": 205,
+                            "x": 80,
+                            "y": 430
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_quick_4_bg",
+                        "position": {
+                            "h": 80,
+                            "w": 245,
+                            "x": 60,
+                            "y": 520
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_quick_4_text",
+                        "position": {
+                            "h": 50,
+                            "w": 205,
+                            "x": 80,
+                            "y": 540
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_logo_placeholder",
+                        "position": {
+                            "h": 220,
+                            "w": 230,
+                            "x": 65,
+                            "y": 650
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_card",
+                        "position": {
+                            "h": 250,
+                            "w": 1015,
+                            "x": 360,
+                            "y": 30
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_title",
+                        "position": {
+                            "h": 75,
+                            "w": 950,
+                            "x": 400,
+                            "y": 50
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_icon",
+                        "position": {
+                            "h": 85,
+                            "w": 90,
+                            "x": 400,
+                            "y": 145
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_text",
+                        "position": {
+                            "h": 80,
+                            "w": 620,
+                            "x": 505,
+                            "y": 130
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_tag",
+                        "position": {
+                            "h": 40,
+                            "w": 650,
+                            "x": 505,
+                            "y": 215
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_path_title",
+                        "position": {
+                            "h": 55,
+                            "w": 835,
+                            "x": 365,
+                            "y": 315
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_path_1_bg",
+                        "position": {
+                            "h": 240,
+                            "w": 315,
+                            "x": 360,
+                            "y": 380
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_path_1_text",
+                        "position": {
+                            "h": 205,
+                            "w": 265,
+                            "x": 390,
+                            "y": 400
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_path_2_bg",
+                        "position": {
+                            "h": 240,
+                            "w": 315,
+                            "x": 710,
+                            "y": 380
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_path_2_text",
+                        "position": {
+                            "h": 205,
+                            "w": 265,
+                            "x": 735,
+                            "y": 400
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_path_3_bg",
+                        "position": {
+                            "h": 240,
+                            "w": 315,
+                            "x": 1050,
+                            "y": 380
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_path_3_text",
+                        "position": {
+                            "h": 205,
+                            "w": 265,
+                            "x": 1075,
+                            "y": 400
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_resources_panel",
+                        "position": {
+                            "h": 250,
+                            "w": 610,
+                            "x": 360,
+                            "y": 660
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_resources_title",
+                        "position": {
+                            "h": 55,
+                            "w": 550,
+                            "x": 395,
+                            "y": 680
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_resources_text",
+                        "position": {
+                            "h": 55,
+                            "w": 520,
+                            "x": 395,
+                            "y": 735
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_resource_links",
+                        "position": {
+                            "h": 105,
+                            "w": 520,
+                            "x": 395,
+                            "y": 795
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_support_panel",
+                        "position": {
+                            "h": 250,
+                            "w": 365,
+                            "x": 1000,
+                            "y": 660
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_support_title",
+                        "position": {
+                            "h": 55,
+                            "w": 310,
+                            "x": 1030,
+                            "y": 680
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_support_text",
+                        "position": {
+                            "h": 70,
+                            "w": 310,
+                            "x": 1030,
+                            "y": 740
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_contact_bg",
+                        "position": {
+                            "h": 60,
+                            "w": 310,
+                            "x": 1030,
+                            "y": 825
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_contact_text",
+                        "position": {
+                            "h": 65,
+                            "w": 270,
+                            "x": 1050,
+                            "y": 835
+                        },
+                        "type": "block"
+                    }
+                ],
+                "type": "absolute"
+            }
+        },
+        "options": {
+            "showTitleAndDescription": false
+        },
+        "tabs": {
+            "items": [
+                {
+                    "label": "Landing Page",
+                    "layoutId": "layout_1"
+                }
+            ]
+        }
+    },
+    "applicationProperties": {
+        "hideEdit": false,
+        "hideExport": false
+    }
+}

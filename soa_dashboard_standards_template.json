@@ -1,0 +1,576 @@
+{
+    "title": "Dashboard Best Practices Template",
+    "description": "A reusable template for documenting dashboard design, ownership, and maintenance standards.",
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            },
+            "ds.spl2": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            }
+        },
+        "visualizations": {
+            "global": {
+                "showProgressBar": true
+            }
+        }
+    },
+    "visualizations": {
+        "viz_code_bg": {
+            "options": {
+                "fillColor": "#071A2F",
+                "strokeColor": "#4EA1FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_code_text": {
+            "options": {
+                "customFontSize": 15,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "```text\nDashboard Name: [ENTER DASHBOARD NAME]\nDescription: [ENTER A SHORT DASHBOARD DESCRIPTION]\nCreated By: [ENTER CREATOR OR TEAM]\nMaintained By: [ENTER CURRENT OWNER OR SUPPORT TEAM]\nLast Updated Date: [ENTER DATE]\nData Sources: [ENTER DATA SOURCES]\nPurpose Statement: [ENTER THE BUSINESS OR TECHNICAL PURPOSE]\nDocumentation: [ENTER DOCUMENTATION URL OR LOCATION]\nSupport Contact: [ENTER SUPPORT CONTACT OR TEAM]\n```"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_code_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "🧩 Paste-Ready Metadata Template"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_control_bg": {
+            "options": {
+                "fillColor": "#102D4F",
+                "strokeColor": "#3E8BFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_control_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "**Version:** [ENTER VERSION]  \n**Effective Date:** [ENTER DATE]  \n**Maintained By:** [ENTER TEAM OR OWNER]  \n**Review Cycle:** [ENTER REVIEW FREQUENCY]  \n**Notes:** [ENTER DOCUMENT NOTES]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_control_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "🗂️ Document Control"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_design_bg": {
+            "options": {
+                "fillColor": "#1C3354",
+                "strokeColor": "#4EA1FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_design_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "[ENTER YOUR ORGANIZATION'S DASHBOARD DESIGN STANDARDS]\n\nSuggested topics:\n- Panel titles and descriptions\n- Layout and visual hierarchy\n- Colors and formatting\n- Filters and time selectors\n- Accessibility\n- User experience expectations"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_design_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "🎨 Design Consistency"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_example_bg": {
+            "options": {
+                "fillColor": "#1A2438",
+                "strokeColor": "#F26A21"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_example_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "**Dashboard Name:** [ENTER EXAMPLE DASHBOARD NAME]  \n**Description:** [ENTER EXAMPLE DESCRIPTION]  \n**Created By:** [ENTER CREATOR OR TEAM]  \n**Maintained By:** [ENTER CURRENT OWNER]  \n**Data Sources:** [ENTER DATA SOURCES]  \n**Purpose:** [ENTER BUSINESS OR TECHNICAL PURPOSE]  \n**Last Updated:** [ENTER DATE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_example_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "📌 Example Metadata"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_footer_bg": {
+            "options": {
+                "fillColor": "#F26A21",
+                "strokeColor": "#FF8B45"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_footer_text": {
+            "options": {
+                "customFontSize": 18,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "**Reminder:** [ENTER A FINAL REMINDER OR IMPORTANT TAKEAWAY FOR DASHBOARD CREATORS]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_header_icon": {
+            "options": {
+                "customFontSize": 48,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "📊"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_header_subtitle": {
+            "options": {
+                "customFontSize": 22,
+                "fontColor": "#F1813F",
+                "fontSize": "custom",
+                "markdown": "[ENTER A SHORT DESCRIPTION OF YOUR ORGANIZATION'S DASHBOARD STANDARDS]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_header_title": {
+            "options": {
+                "customFontSize": 36,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Dashboard Documentation & Best Practices"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_intro_bg": {
+            "options": {
+                "fillColor": "#102D4F",
+                "strokeColor": "#3E8BFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_intro_text": {
+            "options": {
+                "customFontSize": 18,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "[ENTER AN INTRODUCTION EXPLAINING WHY DASHBOARD DOCUMENTATION, OWNERSHIP, DESIGN, AND MAINTENANCE STANDARDS ARE IMPORTANT TO YOUR ORGANIZATION]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_note_bg": {
+            "options": {
+                "fillColor": "#3B2C14",
+                "strokeColor": "#F5B942"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_note_icon": {
+            "options": {
+                "customFontSize": 32,
+                "fontColor": "#F5B942",
+                "fontSize": "custom",
+                "markdown": "⚠️"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_note_text": {
+            "options": {
+                "customFontSize": 18,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "**Important:** [ENTER AN IMPORTANT REQUIREMENT OR NOTE ABOUT DASHBOARD DOCUMENTATION, SECURITY, ACCESS, OR MAINTENANCE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_owner_bg": {
+            "options": {
+                "fillColor": "#312455",
+                "strokeColor": "#9A6DFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_owner_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "[ENTER YOUR ORGANIZATION'S OWNERSHIP AND MAINTENANCE EXPECTATIONS]\n\nSuggested topics:\n- Dashboard owner or team contact\n- Review and validation frequency\n- Access and permission requests\n- Change management\n- Archival expectations\n- Supporting documentation"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_owner_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "👥 Ownership & Maintenance"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_required_bg": {
+            "options": {
+                "fillColor": "#163A2E",
+                "strokeColor": "#38C172"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_required_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "[ENTER YOUR ORGANIZATION'S REQUIRED DASHBOARD METADATA]\n\nSuggested fields:\n- Dashboard name\n- Description\n- Created by\n- Maintained by\n- Last updated date\n- Data sources\n- Purpose statement"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_required_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "✅ Required Metadata"
+            },
+            "type": "splunk.markdown"
+        }
+    },
+    "layout": {
+        "globalInputs": [],
+        "layoutDefinitions": {
+            "layout_1": {
+                "options": {
+                    "backgroundColor": "#071A2F",
+                    "display": "auto",
+                    "height": 1200,
+                    "width": 1440
+                },
+                "structure": [
+                    {
+                        "item": "viz_header_icon",
+                        "position": {
+                            "h": 70,
+                            "w": 70,
+                            "x": 35,
+                            "y": 25
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_header_title",
+                        "position": {
+                            "h": 65,
+                            "w": 1190,
+                            "x": 110,
+                            "y": 20
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_header_subtitle",
+                        "position": {
+                            "h": 50,
+                            "w": 1180,
+                            "x": 115,
+                            "y": 85
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_intro_bg",
+                        "position": {
+                            "h": 90,
+                            "w": 1365,
+                            "x": 35,
+                            "y": 145
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_intro_text",
+                        "position": {
+                            "h": 55,
+                            "w": 1300,
+                            "x": 65,
+                            "y": 165
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_required_bg",
+                        "position": {
+                            "h": 300,
+                            "w": 420,
+                            "x": 35,
+                            "y": 260
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_required_title",
+                        "position": {
+                            "h": 40,
+                            "w": 370,
+                            "x": 60,
+                            "y": 280
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_required_text",
+                        "position": {
+                            "h": 220,
+                            "w": 370,
+                            "x": 60,
+                            "y": 330
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_design_bg",
+                        "position": {
+                            "h": 300,
+                            "w": 420,
+                            "x": 510,
+                            "y": 260
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_design_title",
+                        "position": {
+                            "h": 40,
+                            "w": 370,
+                            "x": 535,
+                            "y": 280
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_design_text",
+                        "position": {
+                            "h": 220,
+                            "w": 370,
+                            "x": 535,
+                            "y": 330
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_owner_bg",
+                        "position": {
+                            "h": 300,
+                            "w": 420,
+                            "x": 980,
+                            "y": 260
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_owner_title",
+                        "position": {
+                            "h": 40,
+                            "w": 370,
+                            "x": 1005,
+                            "y": 280
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_owner_text",
+                        "position": {
+                            "h": 220,
+                            "w": 370,
+                            "x": 1005,
+                            "y": 330
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_note_bg",
+                        "position": {
+                            "h": 85,
+                            "w": 1365,
+                            "x": 35,
+                            "y": 585
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_note_icon",
+                        "position": {
+                            "h": 45,
+                            "w": 50,
+                            "x": 60,
+                            "y": 608
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_note_text",
+                        "position": {
+                            "h": 50,
+                            "w": 1230,
+                            "x": 120,
+                            "y": 605
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_example_bg",
+                        "position": {
+                            "h": 370,
+                            "w": 520,
+                            "x": 35,
+                            "y": 700
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_example_title",
+                        "position": {
+                            "h": 40,
+                            "w": 460,
+                            "x": 60,
+                            "y": 720
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_example_text",
+                        "position": {
+                            "h": 250,
+                            "w": 470,
+                            "x": 60,
+                            "y": 775
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_control_bg",
+                        "position": {
+                            "h": 370,
+                            "w": 345,
+                            "x": 585,
+                            "y": 700
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_control_title",
+                        "position": {
+                            "h": 40,
+                            "w": 295,
+                            "x": 610,
+                            "y": 720
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_control_text",
+                        "position": {
+                            "h": 210,
+                            "w": 295,
+                            "x": 610,
+                            "y": 775
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_code_bg",
+                        "position": {
+                            "h": 370,
+                            "w": 440,
+                            "x": 960,
+                            "y": 700
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_code_title",
+                        "position": {
+                            "h": 60,
+                            "w": 390,
+                            "x": 985,
+                            "y": 720
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_code_text",
+                        "position": {
+                            "h": 270,
+                            "w": 390,
+                            "x": 985,
+                            "y": 780
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_footer_bg",
+                        "position": {
+                            "h": 60,
+                            "w": 1365,
+                            "x": 35,
+                            "y": 1100
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_footer_text",
+                        "position": {
+                            "h": 35,
+                            "w": 1300,
+                            "x": 60,
+                            "y": 1115
+                        },
+                        "type": "block"
+                    }
+                ],
+                "type": "absolute"
+            }
+        },
+        "options": {
+            "showTitleAndDescription": false
+        },
+        "tabs": {
+            "items": [
+                {
+                    "label": "Dashboard Best Practices",
+                    "layoutId": "layout_1"
+                }
+            ]
+        }
+    },
+    "applicationProperties": {
+        "hideEdit": false,
+        "hideExport": false
+    }
+}

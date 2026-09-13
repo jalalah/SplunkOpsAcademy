@@ -1,0 +1,721 @@
+{
+    "title": "Dashboard Library",
+    "description": "Discover dashboards available within the Splunk environment.",
+    "inputs": {
+        "input_BPrx918j": {
+            "options": {
+                "backgroundColor": "#708794",
+                "defaultValue": "*",
+                "token": "description"
+            },
+            "title": "Description",
+            "type": "input.text"
+        },
+        "input_rJKDlyaU": {
+            "options": {
+                "backgroundColor": "#708794",
+                "defaultValue": "*",
+                "token": "author"
+            },
+            "title": "Owner",
+            "type": "input.text"
+        },
+        "input_tjabzgCD": {
+            "options": {
+                "backgroundColor": "#708794",
+                "defaultValue": "*",
+                "token": "label"
+            },
+            "title": "Dashboard Name",
+            "type": "input.text"
+        }
+    },
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "-24h@h",
+                        "latest": "now"
+                    }
+                }
+            },
+            "ds.spl2": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "-24h@h",
+                        "latest": "now"
+                    }
+                }
+            }
+        },
+        "visualizations": {
+            "global": {
+                "showProgressBar": true
+            }
+        }
+    },
+    "visualizations": {
+        "viz_3HZDDcSk": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#D5F3F0",
+                "fontSize": "custom",
+                "markdown": "Found what you were looking for? Navigate to the [**Dashboards**](insertYourLinkHere) page and open it from there!"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_8mh1FJtZ": {
+            "options": {
+                "fillColor": "#122E50",
+                "strokeColor": "#294E70"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_card_discover_bg": {
+            "options": {
+                "fillColor": "#0E3742",
+                "strokeColor": "#14B8A6"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_card_discover_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#D5F3F0",
+                "fontSize": "custom",
+                "markdown": "Browse the library to find dashboards that support your investigation, monitoring, reporting, or data exploration needs."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_discover_title": {
+            "options": {
+                "customFontSize": 22,
+                "fontColor": "#5EEAD4",
+                "fontSize": "custom",
+                "markdown": "### 🔎 Discover Dashboards"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_improve_bg": {
+            "options": {
+                "fillColor": "#2A2050",
+                "strokeColor": "#A78BFA"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_card_owner_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#D6E8F7",
+                "fontSize": "custom",
+                "markdown": "Use the Owner column to identify who created the dashboard and who may be able to answer questions about its data or purpose."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_owner_title": {
+            "options": {
+                "customFontSize": 22,
+                "fontColor": "#73B9FF",
+                "fontSize": "custom",
+                "markdown": "### 👤 Identify the Owner"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_dashboard_table": {
+            "dataSources": {
+                "primary": "ds_dashboard_library"
+            },
+            "options": {
+                "backgroundColor": "#16253D",
+                "count": 20,
+                "dataOverlayMode": "none",
+                "drilldown": "none",
+                "showInternalFields": false,
+                "tableFormat": {
+                    "headerAlign": "left",
+                    "headerBackgroundColor": "#0B223D",
+                    "headerColor": "#FFFFFF"
+                }
+            },
+            "showProgressBar": true,
+            "title": "",
+            "type": "splunk.table"
+        },
+        "viz_feedback_bg": {
+            "options": {
+                "fillColor": "#0B223D",
+                "strokeColor": "#294E70"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_feedback_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#CFD8E3",
+                "fontSize": "custom",
+                "markdown": "Found a missing dashboard, an outdated description, or incorrect owner information? Contact the dashboard owner or submit feedback so the library can stay accurate and useful."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_feedback_title": {
+            "options": {
+                "customFontSize": 23,
+                "fontColor": "#67E8F9",
+                "fontSize": "custom",
+                "markdown": "### 💬 Help Improve This Library"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_accent_cyan": {
+            "options": {
+                "fillColor": "#00D4FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_hero_accent_purple": {
+            "options": {
+                "fillColor": "#8B5CF6"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_hero_bg": {
+            "options": {
+                "fillColor": "#081D33",
+                "strokeColor": "#00D4FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_hero_icon": {
+            "options": {
+                "customFontSize": 54,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "📊"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_icon_bg": {
+            "cornerRadius": [
+                500,
+                500,
+                500,
+                500
+            ],
+            "options": {
+                "fillColor": "#152D4A",
+                "strokeColor": "#00D4FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_hero_text": {
+            "options": {
+                "customFontSize": 19,
+                "fontColor": "#CFDCE8",
+                "fontSize": "custom",
+                "markdown": "Discover dashboards available in our Splunk environment. Review each dashboard's purpose, identify its owner, and find the right resource for your investigation or reporting needs."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_title": {
+            "options": {
+                "customFontSize": 40,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Dashboard Library"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_metric_owners": {
+            "containerOptions": {
+                "description": {
+                    "color": "#FFFFFF"
+                },
+                "title": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "dataSources": {
+                "primary": "ds_total_owners"
+            },
+            "options": {
+                "backgroundColor": "#0E3742",
+                "majorColor": "#FFFFFF",
+                "sparklineDisplay": "off",
+                "trendDisplay": "off"
+            },
+            "title": "👤 Dashboard Owners",
+            "type": "splunk.singlevalue"
+        },
+        "viz_metric_total": {
+            "containerOptions": {
+                "description": {
+                    "color": "#FFFFFF"
+                },
+                "title": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "dataSources": {
+                "primary": "ds_total_dashboards"
+            },
+            "options": {
+                "backgroundColor": "#122E50",
+                "majorColor": "#FFFFFF",
+                "sparklineDisplay": "off",
+                "trendDisplay": "off"
+            },
+            "title": "📈 Total Dashboards",
+            "type": "splunk.singlevalue"
+        },
+        "viz_n9xheDX0": {
+            "options": {
+                "customFontSize": 19,
+                "fontColor": "#CFDCE8",
+                "fontSize": "custom",
+                "markdown": "⚠️ ⚠️ Note: This dashboard currently searches dashboards stored in the application defined within the SPL query. Update the search query if your organization stores dashboards elsewhere."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_ozY7TLRj": {
+            "options": {
+                "customFontSize": 22,
+                "fontColor": "#73B9FF",
+                "fontSize": "custom",
+                "markdown": "### 👍 Found Your Dashboard?"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_table_section_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#BFD0DF",
+                "fontSize": "custom",
+                "markdown": "Use the fields below to search by dashboard name, description, or owner. Partial matches are supported, so you do not need to enter the complete value."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_table_section_title": {
+            "options": {
+                "customFontSize": 29,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Explore Available Dashboards"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_tip_bg": {
+            "options": {
+                "fillColor": "#3B2C14",
+                "strokeColor": "#F5B942"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_tip_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#F5E5BE",
+                "fontSize": "custom",
+                "markdown": "Start by searching dashboard names and descriptions for terms related to your goal, such as authentication, network, endpoint, firewall, vulnerability, or application activity."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_tip_title": {
+            "options": {
+                "customFontSize": 23,
+                "fontColor": "#FFD66B",
+                "fontSize": "custom",
+                "markdown": "### ✨ Quick Tip"
+            },
+            "type": "splunk.markdown"
+        }
+    },
+    "dataSources": {
+        "ds_dashboard_library": {
+            "name": "Dashboard Library",
+            "options": {
+                "query": "| rest /servicesNS/-/-/data/ui/views count=0\n| rename eai:acl.app AS app\n| where app=\"search\" ``` change if you want to pull from more apps ```\n| search description=\"*$description$*\"\n| search label=\"*$label$*\"\n| search author=\"*$author$*\"\n| eval description=if(isnull(description) OR trim(description)=\"\", \"No description provided. Please review the app or contact the owner to add a description.\", description)\n| table label description author\n| rename label AS \"Dashboard Name\" description AS \"Description\" author AS \"Owner\"\n| sort App \"Dashboard Name\"",
+                "queryParameters": {
+                    "earliest": "-24h@h",
+                    "latest": "now"
+                }
+            },
+            "type": "ds.search"
+        },
+        "ds_missing_descriptions": {
+            "name": "Missing Descriptions",
+            "options": {
+                "query": "| rest /servicesNS/-/-/data/ui/views count=0\n| rename eai:acl.app AS app\n| where app=\"search\"\n| eval missing_description=if(isnull(description) OR trim(description)=\"\", 1, 0)\n| stats sum(missing_description) AS \"Missing Descriptions\"",
+                "queryParameters": {
+                    "earliest": "-24h@h",
+                    "latest": "now"
+                }
+            },
+            "type": "ds.search"
+        },
+        "ds_total_dashboards": {
+            "name": "Total Dashboards",
+            "options": {
+                "query": "| rest /servicesNS/-/-/data/ui/views count=0\n| rename eai:acl.app AS app\n| where app=\"search\"\n| stats count AS \"Total Dashboards\"",
+                "queryParameters": {
+                    "earliest": "-24h@h",
+                    "latest": "now"
+                }
+            },
+            "type": "ds.search"
+        },
+        "ds_total_owners": {
+            "name": "Dashboard Owners",
+            "options": {
+                "query": "| rest /servicesNS/-/-/data/ui/views count=0\n| rename eai:acl.app AS app\n| where app=\"search\"\n| stats dc(author) AS \"Dashboard Owners\"",
+                "queryParameters": {
+                    "earliest": "-24h@h",
+                    "latest": "now"
+                }
+            },
+            "type": "ds.search"
+        }
+    },
+    "layout": {
+        "globalInputs": [],
+        "layoutDefinitions": {
+            "layout_1": {
+                "options": {
+                    "backgroundColor": "#061525",
+                    "display": "fit-to-width",
+                    "height": 1470,
+                    "width": 1440
+                },
+                "structure": [
+                    {
+                        "item": "viz_hero_bg",
+                        "position": {
+                            "h": 210,
+                            "w": 1360,
+                            "x": 40,
+                            "y": 20
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_accent_cyan",
+                        "position": {
+                            "h": 10,
+                            "w": 850,
+                            "x": 40,
+                            "y": 20
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_accent_purple",
+                        "position": {
+                            "h": 10,
+                            "w": 510,
+                            "x": 890,
+                            "y": 20
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_icon_bg",
+                        "position": {
+                            "h": 105,
+                            "w": 110,
+                            "x": 80,
+                            "y": 70
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_icon",
+                        "position": {
+                            "h": 75,
+                            "w": 80,
+                            "x": 100,
+                            "y": 90
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_title",
+                        "position": {
+                            "h": 65,
+                            "w": 1050,
+                            "x": 230,
+                            "y": 55
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_text",
+                        "position": {
+                            "h": 80,
+                            "w": 1050,
+                            "x": 230,
+                            "y": 125
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_metric_total",
+                        "position": {
+                            "h": 120,
+                            "w": 250,
+                            "x": 455,
+                            "y": 250
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_metric_owners",
+                        "position": {
+                            "h": 120,
+                            "w": 250,
+                            "x": 735,
+                            "y": 250
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_discover_bg",
+                        "position": {
+                            "h": 170,
+                            "w": 425,
+                            "x": 50,
+                            "y": 390
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_discover_title",
+                        "position": {
+                            "h": 55,
+                            "w": 365,
+                            "x": 80,
+                            "y": 405
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_discover_text",
+                        "position": {
+                            "h": 95,
+                            "w": 355,
+                            "x": 80,
+                            "y": 460
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_improve_bg",
+                        "position": {
+                            "h": 170,
+                            "w": 425,
+                            "x": 510,
+                            "y": 390
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_owner_title",
+                        "position": {
+                            "h": 55,
+                            "w": 365,
+                            "x": 540,
+                            "y": 405
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_owner_text",
+                        "position": {
+                            "h": 95,
+                            "w": 355,
+                            "x": 540,
+                            "y": 460
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_8mh1FJtZ",
+                        "position": {
+                            "h": 170,
+                            "w": 425,
+                            "x": 970,
+                            "y": 390
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_ozY7TLRj",
+                        "position": {
+                            "h": 55,
+                            "w": 400,
+                            "x": 1000,
+                            "y": 405
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_3HZDDcSk",
+                        "position": {
+                            "h": 95,
+                            "w": 355,
+                            "x": 1000,
+                            "y": 470
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_table_section_title",
+                        "position": {
+                            "h": 55,
+                            "w": 650,
+                            "x": 40,
+                            "y": 585
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_table_section_text",
+                        "position": {
+                            "h": 55,
+                            "w": 1100,
+                            "x": 40,
+                            "y": 635
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "input_tjabzgCD",
+                        "position": {
+                            "h": 82,
+                            "w": 240,
+                            "x": 270,
+                            "y": 680
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_BPrx918j",
+                        "position": {
+                            "h": 82,
+                            "w": 240,
+                            "x": 600,
+                            "y": 680
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_rJKDlyaU",
+                        "position": {
+                            "h": 82,
+                            "w": 240,
+                            "x": 930,
+                            "y": 680
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "viz_dashboard_table",
+                        "position": {
+                            "h": 500,
+                            "w": 1360,
+                            "x": 40,
+                            "y": 770
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_tip_bg",
+                        "position": {
+                            "h": 140,
+                            "w": 650,
+                            "x": 40,
+                            "y": 1300
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_tip_title",
+                        "position": {
+                            "h": 55,
+                            "w": 210,
+                            "x": 65,
+                            "y": 1320
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_tip_text",
+                        "position": {
+                            "h": 100,
+                            "w": 390,
+                            "x": 280,
+                            "y": 1315
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_feedback_bg",
+                        "position": {
+                            "h": 140,
+                            "w": 670,
+                            "x": 730,
+                            "y": 1300
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_feedback_title",
+                        "position": {
+                            "h": 90,
+                            "w": 235,
+                            "x": 755,
+                            "y": 1320
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_feedback_text",
+                        "position": {
+                            "h": 100,
+                            "w": 360,
+                            "x": 1010,
+                            "y": 1315
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_n9xheDX0",
+                        "position": {
+                            "h": 80,
+                            "w": 1050,
+                            "x": 230,
+                            "y": 180
+                        },
+                        "type": "block"
+                    }
+                ],
+                "type": "absolute"
+            }
+        },
+        "options": {
+            "showTitleAndDescription": false,
+            "submitButton": true
+        },
+        "tabs": {
+            "items": [
+                {
+                    "label": "Dashboard Library",
+                    "layoutId": "layout_1"
+                }
+            ]
+        }
+    },
+    "applicationProperties": {
+        "hideEdit": false,
+        "hideExport": false
+    }
+}

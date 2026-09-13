@@ -1,0 +1,464 @@
+{
+    "title": "Splunk Foundations",
+    "description": "These modules guide SOC analysts through Splunk fundamentals, required training videos, and knowledge checks. Use the tabs to move through each course in order.",
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            },
+            "ds.spl2": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            }
+        },
+        "visualizations": {
+            "global": {
+                "showProgressBar": true
+            }
+        }
+    },
+    "visualizations": {
+        "intro_check": {
+            "options": {
+                "backgroundColor": "#2C245F",
+                "fontColor": "#FFFFFF",
+                "fontSize": "extraLarge",
+                "markdown": "## [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "intro_details": {
+            "options": {
+                "backgroundColor": "#102A4C",
+                "fontColor": "#FFFFFF",
+                "fontSize": "extraLarge",
+                "markdown": "## Course Description\n\nReview the full course description [INSERT COURSE DESCRIPTION]"
+            },
+            "type": "splunk.markdown"
+        },
+        "intro_header": {
+            "options": {
+                "backgroundColor": "#0B1F3A",
+                "fontColor": "#FFFFFF",
+                "markdown": "# [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "intro_next": {
+            "options": {
+                "backgroundColor": "#D96C22",
+                "fontColor": "#FFFFFF",
+                "fontSize": "extraLarge",
+                "markdown": "## [title]"
+            },
+            "type": "splunk.markdown"
+        },
+        "intro_overview": {
+            "options": {
+                "backgroundColor": "#123C69",
+                "fontColor": "#FFFFFF",
+                "fontSize": "large",
+                "markdown": "## Course Overview\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "intro_training": {
+            "options": {
+                "backgroundColor": "#155A8A",
+                "fontColor": "#FFFFFF",
+                "fontSize": "extraLarge",
+                "markdown": "## Training Video\n\nWatch the required Splunk training\n\n[SUBTITLE]\n\n"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_1OcBpF3d": {
+            "options": {
+                "fillColor": "#0E2745",
+                "strokeColor": "#294e70"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_help_card": {
+            "options": {
+                "backgroundColor": "#2C245F",
+                "fontColor": "#FFFFFF",
+                "markdown": "## [TITLE]\n\n[SUBTITLE]\n\n"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_module_1": {
+            "options": {
+                "backgroundColor": "#102A4C",
+                "fontColor": "#FFFFFF",
+                "markdown": "### X. [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_module_2": {
+            "options": {
+                "backgroundColor": "#123C69",
+                "fontColor": "#FFFFFF",
+                "markdown": "### X. [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_module_3": {
+            "options": {
+                "backgroundColor": "#155A8A",
+                "fontColor": "#FFFFFF",
+                "markdown": "### X. [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_module_4": {
+            "options": {
+                "backgroundColor": "#5761B2",
+                "fontColor": "#FFFFFF",
+                "markdown": "### X. [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_module_5": {
+            "options": {
+                "backgroundColor": "#6D4ACF",
+                "fontColor": "#FFFFFF",
+                "markdown": "### X. [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_module_6": {
+            "options": {
+                "backgroundColor": "#D96C22",
+                "fontColor": "#FFFFFF",
+                "markdown": "### X. [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_outcome_card": {
+            "options": {
+                "backgroundColor": "#0B1F3A",
+                "fontColor": "#FFFFFF",
+                "markdown": "## [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_path_intro": {
+            "options": {
+                "backgroundColor": "#0E2745",
+                "fontColor": "#FFFFFF",
+                "markdown": "## [TITLE]\n\n[SUBTITLE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_step_1": {
+            "options": {
+                "backgroundColor": "#123C69",
+                "fontColor": "#FFFFFF",
+                "markdown": "## 01\n\n### Watch the Training\n\nComplete the assigned Splunk training video for each module.\n\nUse the tabs above to move through the course in order."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_step_2": {
+            "options": {
+                "backgroundColor": "#155A8A",
+                "fontColor": "#FFFFFF",
+                "markdown": "## 02\n\n### [TRAINING INSRUCTIONS]\n\n"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_step_3": {
+            "options": {
+                "backgroundColor": "#6D4ACF",
+                "fontColor": "#FFFFFF",
+                "markdown": "## 03\n\n### [TRAINING INSTRUCTIONS]\n\n"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_welcome_hero": {
+            "options": {
+                "backgroundColor": "#071A2E",
+                "fontColor": "#FFFFFF",
+                "markdown": "# 🎓 [TITLE HERE]\n\n### [SUBTITLE]\n\n\n⏱️ Estimated Completion Time: **X Hours**\n\n[SUBTITLE HERE]"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_zGt3Lzsq": {
+            "options": {
+                "fontColor": "#FFFFFF",
+                "markdown": "✅ [XYZ]\n\n✅ [XYZ]\n\n✅ [XYZ]\n\n✅ [XYZ]"
+            },
+            "type": "splunk.markdown"
+        }
+    },
+    "layout": {
+        "globalInputs": [],
+        "layoutDefinitions": {
+            "layout_1": {
+                "options": {
+                    "backgroundImage": {
+                        "sizeType": "cover",
+                        "src": "splunk-enterprise-kvstore://6a3c1505873edf9f4c8cd66d",
+                        "x": 0,
+                        "y": 0
+                    },
+                    "display": "auto",
+                    "height": 960,
+                    "width": 1440
+                },
+                "structure": [
+                    {
+                        "item": "viz_welcome_hero",
+                        "position": {
+                            "h": 170,
+                            "w": 1360,
+                            "x": 40,
+                            "y": 30
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_step_1",
+                        "position": {
+                            "h": 175,
+                            "w": 420,
+                            "x": 40,
+                            "y": 210
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_step_2",
+                        "position": {
+                            "h": 175,
+                            "w": 420,
+                            "x": 510,
+                            "y": 210
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_step_3",
+                        "position": {
+                            "h": 175,
+                            "w": 420,
+                            "x": 980,
+                            "y": 210
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_path_intro",
+                        "position": {
+                            "h": 105,
+                            "w": 1360,
+                            "x": 40,
+                            "y": 420
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_module_1",
+                        "position": {
+                            "h": 190,
+                            "w": 210,
+                            "x": 40,
+                            "y": 555
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_module_2",
+                        "position": {
+                            "h": 190,
+                            "w": 210,
+                            "x": 270,
+                            "y": 550
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_module_3",
+                        "position": {
+                            "h": 190,
+                            "w": 210,
+                            "x": 500,
+                            "y": 550
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_module_4",
+                        "position": {
+                            "h": 190,
+                            "w": 210,
+                            "x": 730,
+                            "y": 550
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_module_5",
+                        "position": {
+                            "h": 190,
+                            "w": 210,
+                            "x": 960,
+                            "y": 550
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_module_6",
+                        "position": {
+                            "h": 190,
+                            "w": 210,
+                            "x": 1190,
+                            "y": 555
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_outcome_card",
+                        "position": {
+                            "h": 130,
+                            "w": 865,
+                            "x": 40,
+                            "y": 785
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_help_card",
+                        "position": {
+                            "h": 130,
+                            "w": 465,
+                            "x": 935,
+                            "y": 785
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_1OcBpF3d",
+                        "position": {
+                            "h": 140,
+                            "w": 310,
+                            "x": 1040,
+                            "y": 50
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_zGt3Lzsq",
+                        "position": {
+                            "h": 120,
+                            "w": 280,
+                            "x": 1070,
+                            "y": 60
+                        },
+                        "type": "block"
+                    }
+                ],
+                "type": "absolute"
+            },
+            "layout_GlMAE9bQ": {
+                "options": {
+                    "backgroundImage": {
+                        "sizeType": "cover",
+                        "src": "splunk-enterprise-kvstore://6a3c276035e2c654e56efd60",
+                        "x": 0,
+                        "y": 0
+                    },
+                    "display": "auto",
+                    "height": 850,
+                    "width": 1440
+                },
+                "structure": [
+                    {
+                        "item": "intro_header",
+                        "position": {
+                            "h": 110,
+                            "w": 1360,
+                            "x": 40,
+                            "y": 30
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "intro_overview",
+                        "position": {
+                            "h": 160,
+                            "w": 640,
+                            "x": 40,
+                            "y": 190
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "intro_training",
+                        "position": {
+                            "h": 160,
+                            "w": 640,
+                            "x": 750,
+                            "y": 190
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "intro_details",
+                        "position": {
+                            "h": 180,
+                            "w": 420,
+                            "x": 40,
+                            "y": 410
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "intro_check",
+                        "position": {
+                            "h": 180,
+                            "w": 420,
+                            "x": 510,
+                            "y": 410
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "intro_next",
+                        "position": {
+                            "h": 180,
+                            "w": 420,
+                            "x": 980,
+                            "y": 410
+                        },
+                        "type": "block"
+                    }
+                ],
+                "type": "absolute"
+            }
+        },
+        "options": {
+            "showTitleAndDescription": false
+        },
+        "tabs": {
+            "items": [
+                {
+                    "label": "[Splunk Training Landing Page]",
+                    "layoutId": "layout_1"
+                },
+                {
+                    "label": "Training X",
+                    "layoutId": "layout_GlMAE9bQ"
+                }
+            ]
+        }
+    }
+}

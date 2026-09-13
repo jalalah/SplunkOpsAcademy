@@ -1,0 +1,108 @@
+{
+    "title": "Data Model Searches",
+    "description": "Reference searches for working with data models.",
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            }
+        },
+        "visualizations": {
+            "global": {
+                "showProgressBar": true
+            }
+        }
+    },
+    "visualizations": {
+        "viz_SDAYGwes": {
+            "containerOptions": {
+                "description": {
+                    "color": "#B9C9D9"
+                },
+                "title": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "dataSources": {
+                "primary": "ds_fEA2jhjM"
+            },
+            "description": "Reference searches for working with Splunk data models.",
+            "options": {
+                "backgroundColor": "#102A43",
+                "count": 20,
+                "dataOverlayMode": "none",
+                "drilldown": "none",
+                "showInternalFields": false,
+                "showRowNumbers": false,
+                "tableFormat": {
+                    "headerAlign": "left",
+                    "headerBackgroundColor": "#00A87E",
+                    "headerColor": "#FFFFFF"
+                }
+            },
+            "title": "Data Model Searches",
+            "type": "splunk.table"
+        }
+    },
+    "dataSources": {
+        "ds_fEA2jhjM": {
+            "name": "Data Model Searches",
+            "options": {
+                "query": "| inputlookup data_model_searches.csv",
+                "queryParameters": {
+                    "earliest": "-24h@h",
+                    "latest": "now"
+                }
+            },
+            "type": "ds.search"
+        }
+    },
+    "layout": {
+        "globalInputs": [],
+        "layoutDefinitions": {
+            "layout_1": {
+                "options": {
+                    "backgroundImage": {
+                        "sizeType": "cover",
+                        "src": "splunk-enterprise-kvstore://6aa40e55c2a9218631a9bcc8",
+                        "x": 0,
+                        "y": 0
+                    },
+                    "display": "auto",
+                    "height": 1080,
+                    "width": 1440
+                },
+                "structure": [
+                    {
+                        "item": "viz_SDAYGwes",
+                        "position": {
+                            "h": 880,
+                            "w": 1340,
+                            "x": 40,
+                            "y": 30
+                        },
+                        "type": "block"
+                    }
+                ],
+                "type": "absolute"
+            }
+        },
+        "options": {
+            "showTitleAndDescription": false
+        },
+        "tabs": {
+            "items": [
+                {
+                    "label": "Data Models",
+                    "layoutId": "layout_1"
+                }
+            ]
+        }
+    },
+    "applicationProperties": {}
+}

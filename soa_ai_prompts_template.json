@@ -1,0 +1,747 @@
+{
+    "title": "Splunk AI Assistant Prompts",
+    "description": "A quick-start prompt library for Splunk AI Assistant.",
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            },
+            "ds.spl2": {
+                "options": {
+                    "queryParameters": {
+                        "earliest": "$global_time.earliest$",
+                        "latest": "$global_time.latest$"
+                    }
+                }
+            }
+        },
+        "visualizations": {
+            "global": {
+                "showProgressBar": false
+            }
+        }
+    },
+    "visualizations": {
+        "viz_card_1_bg": {
+            "options": {
+                "fillColor": "#0E3742",
+                "strokeColor": "#14B8A6"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_card_1_label": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#5EEAD4",
+                "fontSize": "custom",
+                "markdown": "**📖 UNDERSTAND SPL**"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_1_prompt": {
+            "options": {
+                "customFontSize": 20,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "### Explain this SPL query in plain English."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_1_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#C6E7E4",
+                "fontSize": "custom",
+                "markdown": "Paste your search after the prompt for a clear explanation of what each command is doing."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_2_bg": {
+            "options": {
+                "fillColor": "#122E50",
+                "strokeColor": "#3FA0FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_card_2_label": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#73B9FF",
+                "fontSize": "custom",
+                "markdown": "**🔎 SUMMARIZE DATA**"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_2_prompt": {
+            "options": {
+                "customFontSize": 20,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "### How do I count events by host?"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_2_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#C8DCEF",
+                "fontSize": "custom",
+                "markdown": "Use this prompt to build a simple summary of event activity across your hosts."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_3_bg": {
+            "options": {
+                "fillColor": "#2A2050",
+                "strokeColor": "#A78BFA"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_card_3_label": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#C4B5FD",
+                "fontSize": "custom",
+                "markdown": "**📊 VISUALIZE TRENDS**"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_3_prompt": {
+            "options": {
+                "customFontSize": 20,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "### How do I chart event volume over time?"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_3_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#DDD5F5",
+                "fontSize": "custom",
+                "markdown": "Use this prompt to generate SPL for a time-based view of event activity."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_4_bg": {
+            "options": {
+                "fillColor": "#133740",
+                "strokeColor": "#00D4FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_card_4_label": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#67E8F9",
+                "fontSize": "custom",
+                "markdown": "**🌐 INVESTIGATE SOURCES**"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_4_prompt": {
+            "options": {
+                "customFontSize": 20,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "### How do I show the top source IPs by event count?"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_4_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#C5E6EA",
+                "fontSize": "custom",
+                "markdown": "Use this prompt to identify which source IP addresses are generating the most events."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_5_bg": {
+            "options": {
+                "fillColor": "#3B2C14",
+                "strokeColor": "#F5B942"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_card_5_label": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#FFD66B",
+                "fontSize": "custom",
+                "markdown": "**🧠 LEARN COMMANDS**"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_5_prompt": {
+            "options": {
+                "customFontSize": 20,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "### What is the difference between stats and timechart?"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_card_5_text": {
+            "options": {
+                "customFontSize": 16,
+                "fontColor": "#F3E1B5",
+                "fontSize": "custom",
+                "markdown": "Use this prompt to learn when each command should be used and see practical examples."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_footer_bg": {
+            "options": {
+                "fillColor": "#0B223D",
+                "strokeColor": "#294E70"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_footer_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#CFD8E3",
+                "fontSize": "custom",
+                "markdown": "Open Splunk AI Assistant, copy a prompt, add your SPL or data details, and review the response before using the generated search."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_footer_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "### 🚀 Ready to Try It?"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_accent_1": {
+            "options": {
+                "fillColor": "#00D4FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_hero_accent_2": {
+            "options": {
+                "fillColor": "#8B5CF6"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_hero_bg": {
+            "options": {
+                "fillColor": "#081D33",
+                "strokeColor": "#00D4FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_hero_icon": {
+            "options": {
+                "customFontSize": 58,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "🤖"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_icon_bg": {
+            "cornerRadius": [
+                500,
+                500,
+                500,
+                500
+            ],
+            "options": {
+                "fillColor": "#152D4A",
+                "strokeColor": "#00D4FF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_hero_text": {
+            "options": {
+                "customFontSize": 19,
+                "fontColor": "#CFDCE8",
+                "fontSize": "custom",
+                "markdown": "Start with one of these prompts and let Splunk AI Assistant help you understand SPL, build searches, and explore your data."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_hero_title": {
+            "options": {
+                "customFontSize": 39,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Not Sure What to Ask?"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_popular_bg": {
+            "options": {
+                "fillColor": "#182847",
+                "strokeColor": "#8B5CF6"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_popular_prompt": {
+            "options": {
+                "customFontSize": 21,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "**Explain this SPL query in plain English and walk me through each command.**"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_popular_title": {
+            "options": {
+                "customFontSize": 23,
+                "fontColor": "#C4A7FF",
+                "fontSize": "custom",
+                "markdown": "### 🔥 Popular Starting Point"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_section_title": {
+            "options": {
+                "customFontSize": 29,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "## Explore Prompts by Goal"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_tip_bg": {
+            "options": {
+                "fillColor": "#42265B",
+                "strokeColor": "#D87CFF"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_tip_text": {
+            "options": {
+                "customFontSize": 17,
+                "fontColor": "#FFFFFF",
+                "fontSize": "custom",
+                "markdown": "Add your goal and desired output.\n\n**Try:** Explain this SPL query in plain English, identify any issues, and provide an optimized version."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_tip_title": {
+            "options": {
+                "customFontSize": 24,
+                "fontColor": "#F0C6FF",
+                "fontSize": "custom",
+                "markdown": "**✨ Make Your Prompt Stronger**"
+            },
+            "type": "splunk.markdown"
+        }
+    },
+    "layout": {
+        "globalInputs": [],
+        "layoutDefinitions": {
+            "layout_1": {
+                "options": {
+                    "backgroundColor": "#061525",
+                    "backgroundImage": {
+                        "sizeType": "cover",
+                        "src": "splunk-enterprise-kvstore://6a98254d51a415566a50b41f",
+                        "x": 0,
+                        "y": 0
+                    },
+                    "display": "auto",
+                    "height": 1080,
+                    "width": 1440
+                },
+                "structure": [
+                    {
+                        "item": "viz_hero_bg",
+                        "position": {
+                            "h": 210,
+                            "w": 1360,
+                            "x": 40,
+                            "y": 20
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_accent_1",
+                        "position": {
+                            "h": 10,
+                            "w": 850,
+                            "x": 40,
+                            "y": 25
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_accent_2",
+                        "position": {
+                            "h": 10,
+                            "w": 510,
+                            "x": 890,
+                            "y": 25
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_icon_bg",
+                        "position": {
+                            "h": 105,
+                            "w": 110,
+                            "x": 80,
+                            "y": 70
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_icon",
+                        "position": {
+                            "h": 80,
+                            "w": 85,
+                            "x": 100,
+                            "y": 90
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_title",
+                        "position": {
+                            "h": 70,
+                            "w": 1050,
+                            "x": 230,
+                            "y": 60
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_hero_text",
+                        "position": {
+                            "h": 75,
+                            "w": 1050,
+                            "x": 230,
+                            "y": 130
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_popular_bg",
+                        "position": {
+                            "h": 110,
+                            "w": 1360,
+                            "x": 50,
+                            "y": 260
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_popular_title",
+                        "position": {
+                            "h": 75,
+                            "w": 365,
+                            "x": 70,
+                            "y": 290
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_popular_prompt",
+                        "position": {
+                            "h": 55,
+                            "w": 930,
+                            "x": 430,
+                            "y": 290
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_section_title",
+                        "position": {
+                            "h": 55,
+                            "w": 700,
+                            "x": 40,
+                            "y": 395
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_1_bg",
+                        "position": {
+                            "h": 245,
+                            "w": 425,
+                            "x": 40,
+                            "y": 465
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_1_label",
+                        "position": {
+                            "h": 40,
+                            "w": 350,
+                            "x": 70,
+                            "y": 485
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_1_prompt",
+                        "position": {
+                            "h": 75,
+                            "w": 355,
+                            "x": 70,
+                            "y": 535
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_1_text",
+                        "position": {
+                            "h": 85,
+                            "w": 355,
+                            "x": 70,
+                            "y": 615
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_2_bg",
+                        "position": {
+                            "h": 245,
+                            "w": 425,
+                            "x": 505,
+                            "y": 465
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_2_label",
+                        "position": {
+                            "h": 40,
+                            "w": 350,
+                            "x": 535,
+                            "y": 485
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_2_prompt",
+                        "position": {
+                            "h": 75,
+                            "w": 355,
+                            "x": 535,
+                            "y": 535
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_2_text",
+                        "position": {
+                            "h": 85,
+                            "w": 355,
+                            "x": 535,
+                            "y": 615
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_3_bg",
+                        "position": {
+                            "h": 245,
+                            "w": 425,
+                            "x": 970,
+                            "y": 465
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_3_label",
+                        "position": {
+                            "h": 40,
+                            "w": 350,
+                            "x": 1000,
+                            "y": 485
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_3_prompt",
+                        "position": {
+                            "h": 75,
+                            "w": 355,
+                            "x": 1000,
+                            "y": 535
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_3_text",
+                        "position": {
+                            "h": 85,
+                            "w": 355,
+                            "x": 1000,
+                            "y": 615
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_4_bg",
+                        "position": {
+                            "h": 245,
+                            "w": 425,
+                            "x": 40,
+                            "y": 740
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_4_label",
+                        "position": {
+                            "h": 40,
+                            "w": 350,
+                            "x": 70,
+                            "y": 760
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_4_prompt",
+                        "position": {
+                            "h": 90,
+                            "w": 355,
+                            "x": 70,
+                            "y": 810
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_4_text",
+                        "position": {
+                            "h": 70,
+                            "w": 355,
+                            "x": 70,
+                            "y": 890
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_5_bg",
+                        "position": {
+                            "h": 245,
+                            "w": 425,
+                            "x": 505,
+                            "y": 740
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_5_label",
+                        "position": {
+                            "h": 40,
+                            "w": 350,
+                            "x": 535,
+                            "y": 760
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_5_prompt",
+                        "position": {
+                            "h": 90,
+                            "w": 355,
+                            "x": 535,
+                            "y": 810
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_card_5_text",
+                        "position": {
+                            "h": 70,
+                            "w": 355,
+                            "x": 540,
+                            "y": 890
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_tip_bg",
+                        "position": {
+                            "h": 245,
+                            "w": 425,
+                            "x": 970,
+                            "y": 740
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_tip_title",
+                        "position": {
+                            "h": 85,
+                            "w": 355,
+                            "x": 990,
+                            "y": 760
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_tip_text",
+                        "position": {
+                            "h": 145,
+                            "w": 355,
+                            "x": 1000,
+                            "y": 810
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_footer_bg",
+                        "position": {
+                            "h": 70,
+                            "w": 1360,
+                            "x": 40,
+                            "y": 1000
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_footer_title",
+                        "position": {
+                            "h": 85,
+                            "w": 270,
+                            "x": 70,
+                            "y": 1010
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_footer_text",
+                        "position": {
+                            "h": 50,
+                            "w": 970,
+                            "x": 370,
+                            "y": 1010
+                        },
+                        "type": "block"
+                    }
+                ],
+                "type": "absolute"
+            }
+        },
+        "options": {
+            "showTitleAndDescription": false
+        },
+        "tabs": {
+            "items": [
+                {
+                    "label": "AI Assistant Prompts",
+                    "layoutId": "layout_1"
+                }
+            ]
+        }
+    }
+}

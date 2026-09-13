@@ -1,0 +1,662 @@
+{
+    "title": "Index Library",
+    "description": "This dashboard shows data that is searchable within CNH's Splunk environment",
+    "inputs": {
+        "input_1zGTA2rO": {
+            "options": {
+                "defaultValue": "*",
+                "token": "keywords"
+            },
+            "title": "Keywords",
+            "type": "input.text"
+        },
+        "input_GTLbJDXN": {
+            "eventHandlers": [
+                {
+                    "options": {
+                        "tokens": [
+                            {
+                                "token": "keywords",
+                                "value": "Traffic"
+                            }
+                        ]
+                    },
+                    "type": "drilldown.setToken"
+                }
+            ],
+            "options": {
+                "label": "Traffic"
+            },
+            "type": "input.button"
+        },
+        "input_KEBYXYHn": {
+            "eventHandlers": [
+                {
+                    "options": {
+                        "tokens": [
+                            {
+                                "token": "keywords",
+                                "value": "firewall"
+                            }
+                        ]
+                    },
+                    "type": "drilldown.setToken"
+                }
+            ],
+            "options": {
+                "label": "Firewall"
+            },
+            "type": "input.button"
+        },
+        "input_ONeSTA3x": {
+            "eventHandlers": [
+                {
+                    "options": {
+                        "tokens": [
+                            {
+                                "token": "keywords",
+                                "value": "Web"
+                            }
+                        ]
+                    },
+                    "type": "drilldown.setToken"
+                }
+            ],
+            "options": {
+                "label": "Web"
+            },
+            "type": "input.button"
+        },
+        "input_Q7STODoi": {
+            "eventHandlers": [
+                {
+                    "options": {
+                        "tokens": [
+                            {
+                                "token": "keywords",
+                                "value": "Network"
+                            }
+                        ]
+                    },
+                    "type": "drilldown.setToken"
+                }
+            ],
+            "options": {
+                "label": "Network"
+            },
+            "type": "input.button"
+        },
+        "input_UGoaBnwH": {
+            "options": {
+                "defaultValue": "*",
+                "token": "description"
+            },
+            "title": "Description",
+            "type": "input.text"
+        },
+        "input_pGxIfIM4": {
+            "eventHandlers": [
+                {
+                    "options": {
+                        "tokens": [
+                            {
+                                "token": "keywords",
+                                "value": "Device"
+                            }
+                        ]
+                    },
+                    "type": "drilldown.setToken"
+                }
+            ],
+            "options": {
+                "label": "Device"
+            },
+            "type": "input.button"
+        },
+        "input_sOwk0snl": {
+            "options": {
+                "defaultValue": "*",
+                "token": "index"
+            },
+            "title": "Index",
+            "type": "input.text"
+        },
+        "input_y8hYMWT2": {
+            "eventHandlers": [
+                {
+                    "options": {
+                        "tokens": [
+                            {
+                                "token": "keywords",
+                                "value": "Authentication"
+                            }
+                        ]
+                    },
+                    "type": "drilldown.setToken"
+                }
+            ],
+            "options": {
+                "label": "Authentication"
+            },
+            "type": "input.button"
+        }
+    },
+    "defaults": {
+        "dataSources": {
+            "ds.search": {
+                "options": {
+                    "queryParameters": {}
+                }
+            },
+            "ds.spl2": {
+                "options": {
+                    "queryParameters": {}
+                }
+            }
+        },
+        "tokens": {
+            "default": {
+                "Network": {
+                    "value": "*"
+                },
+                "keywords": {
+                    "value": "*"
+                },
+                "popular_searches": {
+                    "value": "*"
+                }
+            }
+        },
+        "visualizations": {
+            "global": {
+                "showProgressBar": true
+            }
+        }
+    },
+    "visualizations": {
+        "viz_7cuQpMCg": {
+            "dataSources": {
+                "primary": "ds_JSZEfj05"
+            },
+            "eventHandlers": [
+                {
+                    "options": {
+                        "earliest": "auto",
+                        "latest": "auto",
+                        "newTab": false,
+                        "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| dedup sourcetype\n| table sourcetype\n| sort sourcetype",
+                        "type": "custom"
+                    },
+                    "type": "drilldown.linkToSearch"
+                }
+            ],
+            "options": {
+                "backgroundColor": "#16253D"
+            },
+            "title": "Total Sourcetypes",
+            "type": "splunk.singlevalue"
+        },
+        "viz_BXN4Ehyz": {
+            "options": {
+                "icon": "splunk-enterprise-kvstore://icon-server__3fcecd0d-1645-4745-bdec-9a612660b662.svg",
+                "showValue": false
+            },
+            "type": "splunk.singlevalueicon"
+        },
+        "viz_Lp0wwn08": {
+            "context": {
+                "descriptionColumnFormatEditorConfig": {
+                    "string": {
+                        "unitPosition": "after"
+                    }
+                },
+                "descriptionRowBackgroundColorsEditorConfig": [
+                    {
+                        "match": "*",
+                        "value": "#ad3f20"
+                    }
+                ],
+                "descriptionRowColorsEditorConfig": [
+                    "#ffffff"
+                ],
+                "indexColumnFormatEditorConfig": {
+                    "string": {
+                        "unitPosition": "after"
+                    }
+                },
+                "indexRowBackgroundColorsEditorConfig": [
+                    {
+                        "match": "*",
+                        "value": "#5C33FF"
+                    }
+                ],
+                "indexRowColorsEditorConfig": [
+                    "#ffffff"
+                ],
+                "keywordsColumnFormatEditorConfig": {
+                    "string": {
+                        "unitPosition": "after"
+                    }
+                },
+                "keywordsRowBackgroundColorsEditorConfig": [
+                    {
+                        "match": "*",
+                        "value": "#003e80"
+                    }
+                ],
+                "keywordsRowColorsEditorConfig": [
+                    "#ffffff"
+                ],
+                "sourcetypeColumnFormatEditorConfig": {
+                    "string": {
+                        "unitPosition": "after"
+                    }
+                },
+                "sourcetypeRowBackgroundColorsEditorConfig": [
+                    {
+                        "match": "*",
+                        "value": "#207865"
+                    }
+                ],
+                "sourcetypeRowColorsEditorConfig": [
+                    "#ffffff"
+                ]
+            },
+            "dataSources": {
+                "primary": "ds_CyhUhOAt"
+            },
+            "options": {
+                "backgroundColor": "#16253D",
+                "columnFormat": {
+                    "description": {
+                        "align": "auto",
+                        "data": "> table | seriesByName(\"description\") | formatByType(descriptionColumnFormatEditorConfig)",
+                        "headerAlign": "auto",
+                        "rowBackgroundColors": "> table | seriesByName(\"description\") | matchValue(descriptionRowBackgroundColorsEditorConfig)",
+                        "rowColors": "> table | seriesByName('description') | pick(descriptionRowColorsEditorConfig)",
+                        "textOverflow": "break-word"
+                    },
+                    "index": {
+                        "align": "auto",
+                        "data": "> table | seriesByName(\"index\") | formatByType(indexColumnFormatEditorConfig)",
+                        "headerAlign": "auto",
+                        "rowBackgroundColors": "> table | seriesByName('index') | matchValue(indexRowBackgroundColorsEditorConfig)",
+                        "rowColors": "> table | seriesByName('index') | pick(indexRowColorsEditorConfig)",
+                        "textOverflow": "break-word"
+                    },
+                    "keywords": {
+                        "align": "auto",
+                        "data": "> table | seriesByName(\"keywords\") | formatByType(keywordsColumnFormatEditorConfig)",
+                        "headerAlign": "auto",
+                        "rowBackgroundColors": "> table | seriesByName(\"keywords\") | matchValue(keywordsRowBackgroundColorsEditorConfig)",
+                        "rowColors": "> table | seriesByName('keywords') | pick(keywordsRowColorsEditorConfig)",
+                        "textOverflow": "break-word"
+                    },
+                    "sourcetype": {
+                        "align": "auto",
+                        "data": "> table | seriesByName(\"sourcetype\") | formatByType(sourcetypeColumnFormatEditorConfig)",
+                        "headerAlign": "auto",
+                        "rowBackgroundColors": "> table | seriesByName(\"sourcetype\") | matchValue(sourcetypeRowBackgroundColorsEditorConfig)",
+                        "rowColors": "> table | seriesByName('sourcetype') | pick(sourcetypeRowColorsEditorConfig)",
+                        "textOverflow": "break-word"
+                    }
+                },
+                "count": 20,
+                "dataOverlayMode": "none",
+                "drilldown": "none",
+                "showInternalFields": false,
+                "tableFormat": {
+                    "headerAlign": "left",
+                    "headerBackgroundColor": "> backgroundColor | setColorChannel(tableHeaderBackgroundColorConfig)",
+                    "headerColor": "> headerBackgroundColor | maxContrast(tableRowColorMaxContrast)",
+                    "rowBackgroundColors": "> table | seriesByIndex(0) | pick(tableAltRowBackgroundColorsByBackgroundColor)",
+                    "rowColors": "> rowBackgroundColors | maxContrast(tableRowColorMaxContrast)"
+                }
+            },
+            "showProgressBar": true,
+            "title": "",
+            "type": "splunk.table"
+        },
+        "viz_LslAH2xt": {
+            "options": {
+                "fontColor": "#ffffff",
+                "fontSize": "large",
+                "markdown": "## Template Requirements\n\nTo use this dashboard, upload a lookup containing the following fields:\n\n- index\n- sourcetype\n- description\n- keywords\n\nThe dashboard is configured to reference this lookup when displaying searchable index and sourcetype information.\n\n## Customization\n\nFeel free to modify the lookup structure to meet your organization's needs. Additional fields can be added and existing fields can be renamed as long as the dashboard searches are updated accordingly.\n\nRecommended customizations:\n\n- Update button labels and keyword categories to match your environment\n- Modify descriptions to align with your data sources\n- Add organization-specific metadata fields\n- Adjust filters and search criteria as needed\n\n## Example Lookup Structure\n\n| index | sourcetype | description | keywords |\n|---------|---------|---------|---------|\n| example_index | example_sourcetype | Description of the data source | security, authentication, endpoint |\n\n**Note:** If field names are changed, update all associated searches, filters, and button actions within the dashboard source code."
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_UkMC7XPg": {
+            "options": {
+                "customFontSize": 25,
+                "fontSize": "custom",
+                "markdown": "Popular Searches"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_WVhduOFR": {
+            "options": {
+                "customFontSize": 20,
+                "fontSize": "custom",
+                "markdown": "Search by business terms or technology names to discover avaialble data. Examples: MFA, VPN, Firewall"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_dgxKbwV6": {
+            "options": {
+                "fillColor": "#16253D"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_f6lE7VSw": {
+            "options": {
+                "fillColor": "#16253D"
+            },
+            "type": "splunk.rectangle"
+        },
+        "viz_qF8G3HVU": {
+            "options": {
+                "customFontSize": 30,
+                "fontSize": "custom",
+                "markdown": "How to use this library​"
+            },
+            "type": "splunk.markdown"
+        },
+        "viz_yQzInNxD": {
+            "dataSources": {
+                "primary": "ds_1OGFeZah"
+            },
+            "eventHandlers": [
+                {
+                    "options": {
+                        "earliest": "auto",
+                        "latest": "auto",
+                        "newTab": false,
+                        "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| stats count by index\n| sort index",
+                        "type": "custom"
+                    },
+                    "type": "drilldown.linkToSearch"
+                }
+            ],
+            "options": {
+                "backgroundColor": "#16253D",
+                "unit": ""
+            },
+            "title": "Total Indexes",
+            "type": "splunk.singlevalue"
+        }
+    },
+    "dataSources": {
+        "ds_1OGFeZah": {
+            "name": "Total Indexes",
+            "options": {
+                "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| stats dc(index) as \"Total Indexes\"",
+                "queryParameters": {
+                    "earliest": "-24h@h",
+                    "latest": "now"
+                }
+            },
+            "type": "ds.search"
+        },
+        "ds_CyhUhOAt": {
+            "name": "Indexes_ Sources_ and Sourcetypes",
+            "options": {
+                "query": "| inputlookup YourLookUpHere\n| search default_index=N\n| search keywords=\"*$keywords$*\"\n| search index=\"*$index$*\"\n| search description = \"*$description$*\"\n| table index sourcetype description keywords",
+                "queryParameters": {
+                    "earliest": "-15m",
+                    "latest": "now",
+                    "sampleRatio": 1
+                }
+            },
+            "type": "ds.search"
+        },
+        "ds_EBijoQRF": {
+            "name": "Indexes Missing Descriptions",
+            "options": {
+                "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| eval missing_desc=if(isnull(description) OR description=\"\",1,0)\n| stats sum(missing_desc) as \"Indexes Missing Descriptions\"",
+                "queryParameters": {
+                    "earliest": "-24h@h",
+                    "latest": "now"
+                }
+            },
+            "type": "ds.search"
+        },
+        "ds_JSZEfj05": {
+            "name": "Total SourceTypes",
+            "options": {
+                "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| stats dc(sourcetype) as \"Total Sourcetypes\"",
+                "queryParameters": {
+                    "earliest": "-24h@h",
+                    "latest": "now"
+                }
+            },
+            "type": "ds.search"
+        }
+    },
+    "layout": {
+        "globalInputs": [],
+        "layoutDefinitions": {
+            "layout_1": {
+                "options": {
+                    "backgroundImage": {
+                        "sizeType": "cover",
+                        "src": "splunk-enterprise-kvstore://6a57ac0b041e5f100824ba0a",
+                        "x": 0,
+                        "y": 0
+                    },
+                    "display": "fit-to-width",
+                    "height": 2000,
+                    "width": 1440
+                },
+                "structure": [
+                    {
+                        "item": "viz_Lp0wwn08",
+                        "position": {
+                            "h": 500,
+                            "w": 1380,
+                            "x": 30,
+                            "y": 550
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_yQzInNxD",
+                        "position": {
+                            "h": 120,
+                            "w": 280,
+                            "x": 440,
+                            "y": 50
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_7cuQpMCg",
+                        "position": {
+                            "h": 120,
+                            "w": 280,
+                            "x": 750,
+                            "y": 50
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_dgxKbwV6",
+                        "position": {
+                            "h": 110,
+                            "w": 940,
+                            "x": 250,
+                            "y": 180
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_WVhduOFR",
+                        "position": {
+                            "h": 50,
+                            "w": 660,
+                            "x": 440,
+                            "y": 230
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_qF8G3HVU",
+                        "position": {
+                            "h": 50,
+                            "w": 330,
+                            "x": 570,
+                            "y": 190
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_BXN4Ehyz",
+                        "position": {
+                            "h": 90,
+                            "w": 60,
+                            "x": 360,
+                            "y": 190
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_f6lE7VSw",
+                        "position": {
+                            "h": 60,
+                            "w": 720,
+                            "x": 400,
+                            "y": 360
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "viz_UkMC7XPg",
+                        "position": {
+                            "h": 40,
+                            "w": 240,
+                            "x": 650,
+                            "y": 320
+                        },
+                        "type": "block"
+                    },
+                    {
+                        "item": "input_KEBYXYHn",
+                        "position": {
+                            "h": 70,
+                            "w": 120,
+                            "x": 410,
+                            "y": 360
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_Q7STODoi",
+                        "position": {
+                            "h": 82,
+                            "w": 100,
+                            "x": 530,
+                            "y": 360
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_1zGTA2rO",
+                        "position": {
+                            "h": 82,
+                            "w": 198,
+                            "x": 460,
+                            "y": 450
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_UGoaBnwH",
+                        "position": {
+                            "h": 82,
+                            "w": 198,
+                            "x": 250,
+                            "y": 450
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_sOwk0snl",
+                        "position": {
+                            "h": 82,
+                            "w": 198,
+                            "x": 40,
+                            "y": 450
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_pGxIfIM4",
+                        "position": {
+                            "h": 82,
+                            "w": 100,
+                            "x": 630,
+                            "y": 360
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_GTLbJDXN",
+                        "position": {
+                            "h": 82,
+                            "w": 100,
+                            "x": 740,
+                            "y": 360
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_ONeSTA3x",
+                        "position": {
+                            "h": 82,
+                            "w": 100,
+                            "x": 850,
+                            "y": 360
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "input_y8hYMWT2",
+                        "position": {
+                            "h": 82,
+                            "w": 150,
+                            "x": 950,
+                            "y": 360
+                        },
+                        "type": "input"
+                    },
+                    {
+                        "item": "viz_LslAH2xt",
+                        "position": {
+                            "h": 630,
+                            "w": 1170,
+                            "x": 90,
+                            "y": 1020
+                        },
+                        "type": "block"
+                    }
+                ],
+                "type": "absolute"
+            }
+        },
+        "options": {
+            "showTitleAndDescription": false,
+            "submitButton": true
+        },
+        "tabs": {
+            "items": [
+                {
+                    "label": "New tab",
+                    "layoutId": "layout_1"
+                }
+            ]
+        }
+    },
+    "applicationProperties": {
+        "hideEdit": false,
+        "hideExport": false
+    }
+}
