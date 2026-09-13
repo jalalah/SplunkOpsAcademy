@@ -1,6 +1,6 @@
 {
     "title": "Index Library",
-    "description": "This dashboard shows data that is searchable within CNH's Splunk environment",
+    "description": "This dashboard shows data that is searchable within Your Splunk environment",
     "inputs": {
         "input_1zGTA2rO": {
             "options": {
@@ -184,7 +184,7 @@
                         "earliest": "auto",
                         "latest": "auto",
                         "newTab": false,
-                        "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| dedup sourcetype\n| table sourcetype\n| sort sourcetype",
+                        "query": "| inputlookup your_lookup_here\n| search default_index=N\n| dedup sourcetype\n| table sourcetype\n| sort sourcetype",
                         "type": "custom"
                     },
                     "type": "drilldown.linkToSearch"
@@ -371,7 +371,7 @@
                         "earliest": "auto",
                         "latest": "auto",
                         "newTab": false,
-                        "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| stats count by index\n| sort index",
+                        "query": "| inputlookup your_lookup_here\n| search default_index=N\n| stats count by index\n| sort index",
                         "type": "custom"
                     },
                     "type": "drilldown.linkToSearch"
@@ -389,7 +389,7 @@
         "ds_1OGFeZah": {
             "name": "Total Indexes",
             "options": {
-                "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| stats dc(index) as \"Total Indexes\"",
+                "query": "| inputlookup your_lookup_herea\n| search default_index=N\n| stats dc(index) as \"Total Indexes\"",
                 "queryParameters": {
                     "earliest": "-24h@h",
                     "latest": "now"
@@ -412,7 +412,7 @@
         "ds_EBijoQRF": {
             "name": "Indexes Missing Descriptions",
             "options": {
-                "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| eval missing_desc=if(isnull(description) OR description=\"\",1,0)\n| stats sum(missing_desc) as \"Indexes Missing Descriptions\"",
+                "query": "| inputlookup your_lookup_here\n| search default_index=N\n| eval missing_desc=if(isnull(description) OR description=\"\",1,0)\n| stats sum(missing_desc) as \"Indexes Missing Descriptions\"",
                 "queryParameters": {
                     "earliest": "-24h@h",
                     "latest": "now"
@@ -423,7 +423,7 @@
         "ds_JSZEfj05": {
             "name": "Total SourceTypes",
             "options": {
-                "query": "| inputlookup cnh_searchable_data\n| search default_index=N\n| stats dc(sourcetype) as \"Total Sourcetypes\"",
+                "query": "| inputlookup your_lookup_here\n| search default_index=N\n| stats dc(sourcetype) as \"Total Sourcetypes\"",
                 "queryParameters": {
                     "earliest": "-24h@h",
                     "latest": "now"
